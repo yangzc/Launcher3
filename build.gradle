@@ -1,11 +1,15 @@
 buildscript {
     repositories {
+        maven{ url "https://maven.aliyun.com/repository/google"}
+        maven{ url "https://maven.aliyun.com/repository/jcenter"}
+        maven{ url "https://maven.aliyun.com/repository/central"}
         mavenCentral()
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.1'
-        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.0'
+        classpath "com.android.tools.build:gradle:4.2.2"
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.8'
     }
 }
 
@@ -13,12 +17,12 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.protobuf'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.0'
+    compileSdkVersion 27
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
 
@@ -30,16 +34,18 @@ android {
         }
     }
 
+    flavorDimensions 'lib'
     productFlavors {
         aosp {
-            applicationId 'com.android.launcher3'
-            testApplicationId 'com.android.launcher3.tests'
+            dimension 'lib'
+//            applicationId 'com.android.launcher3'
+//            testApplicationId 'com.android.launcher3.tests'
         }
 
-        l3go {
-            applicationId 'com.android.launcher3'
-            testApplicationId 'com.android.launcher3.tests'
-        }
+//        l3go {
+//            applicationId 'com.android.launcher3'
+//            testApplicationId 'com.android.launcher3.tests'
+//        }
     }
     sourceSets {
         main {
@@ -63,30 +69,34 @@ android {
             manifest.srcFile "AndroidManifest.xml"
         }
 
-        aospAndroidTest {
-            manifest.srcFile "tests/AndroidManifest.xml"
-        }
+//        aospAndroidTest {
+//            manifest.srcFile "tests/AndroidManifest.xml"
+//        }
 
-        l3go {
-            res.srcDirs = ['go/res']
-            java.srcDirs = ['go/src_flags']
-            // Note: we are using the Launcher3 manifest here because the gradle manifest-merger uses
-            // different attributes than the build system.
-            manifest.srcFile "AndroidManifest.xml"
-        }
+//        l3go {
+//            res.srcDirs = ['go/res']
+//            java.srcDirs = ['go/src_flags']
+//            // Note: we are using the Launcher3 manifest here because the gradle manifest-merger uses
+//            // different attributes than the build system.
+//            manifest.srcFile "AndroidManifest.xml"
+//        }
 
-        l3goAndroidTest {
-            manifest.srcFile "tests/AndroidManifest.xml"
-        }
+//        l3goAndroidTest {
+//            manifest.srcFile "tests/AndroidManifest.xml"
+//        }
     }
 }
 
 repositories {
+    maven{ url "https://maven.aliyun.com/repository/google"}
+    maven{ url "https://maven.aliyun.com/repository/jcenter"}
+    maven{ url "https://maven.aliyun.com/repository/central"}
     mavenCentral()
     jcenter()
+    google()
 }
 
-final String SUPPORT_LIBS_VERSION = '26.0.0-SNAPSHOT'
+final String SUPPORT_LIBS_VERSION = '27.1.1'
 dependencies {
     compile "com.android.support:support-v4:${SUPPORT_LIBS_VERSION}"
     compile "com.android.support:support-dynamic-animation:${SUPPORT_LIBS_VERSION}"
@@ -106,7 +116,7 @@ dependencies {
 protobuf {
     // Configure the protoc executable
     protoc {
-        artifact = 'com.google.protobuf:protoc:3.0.0-alpha-3'
+        artifact = 'com.google.protobuf:protoc:3.0.0:osx-x86_64'
 
         generateProtoTasks {
             all().each { task ->

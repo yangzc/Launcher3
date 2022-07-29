@@ -475,9 +475,9 @@ public class DeviceProfile {
         // not matter.
         Point padding = getTotalWorkspacePadding();
         result.x = calculateCellWidth(availableWidthPx - padding.x
-                - cellLayoutPaddingLeftRightPx * 2, inv.numColumns);
+                - cellLayoutPaddingLeftRightPx * 2, inv.numColumns == 0 ? 4 : inv.numColumns);
         result.y = calculateCellHeight(availableHeightPx - padding.y
-                - cellLayoutBottomPaddingPx, inv.numRows);
+                - cellLayoutBottomPaddingPx, inv.numRows ==0 ? 4: inv.numRows);
         return result;
     }
 
