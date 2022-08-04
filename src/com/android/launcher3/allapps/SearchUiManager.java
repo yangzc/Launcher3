@@ -15,8 +15,8 @@
  */
 package com.android.launcher3.allapps;
 
-import android.support.animation.SpringAnimation;
-import android.support.annotation.NonNull;
+import androidx.dynamicanimation.animation.SpringAnimation;
+import androidx.annotation.NonNull;
 import android.view.KeyEvent;
 
 /**

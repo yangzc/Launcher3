@@ -21,7 +21,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Region;
-import android.support.v4.graphics.ColorUtils;
+import androidx.core.graphics.ColorUtils;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
@@ -63,7 +63,7 @@ public class DoubleShadowBubbleTextView extends BubbleTextView {
                 ColorUtils.setAlphaComponent(mShadowInfo.ambientShadowColor, alpha));
 
         drawWithoutBadge(canvas);
-        canvas.save(Canvas.CLIP_SAVE_FLAG);
+        canvas.save();
         canvas.clipRect(getScrollX(), getScrollY() + getExtendedPaddingTop(),
                 getScrollX() + getWidth(),
                 getScrollY() + getHeight(), Region.Op.INTERSECT);

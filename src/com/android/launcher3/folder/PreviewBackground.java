@@ -30,7 +30,7 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.RadialGradient;
 import android.graphics.Region;
 import android.graphics.Shader;
-import android.support.v4.graphics.ColorUtils;
+import androidx.core.graphics.ColorUtils;
 import android.util.Property;
 import android.view.View;
 
@@ -224,10 +224,10 @@ public class PreviewBackground {
         if (canvas.isHardwareAccelerated()) {
             saveCount = canvas.saveLayer(offsetX - mStrokeWidth, offsetY,
                     offsetX + radius + shadowRadius, offsetY + shadowRadius + shadowRadius,
-                    null, Canvas.CLIP_TO_LAYER_SAVE_FLAG | Canvas.HAS_ALPHA_LAYER_SAVE_FLAG);
+                    null, Canvas.ALL_SAVE_FLAG);
 
         } else {
-            saveCount = canvas.save(Canvas.CLIP_SAVE_FLAG);
+            saveCount = canvas.save();
             canvas.clipPath(getClipPath(), Region.Op.DIFFERENCE);
         }
 

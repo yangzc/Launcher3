@@ -22,7 +22,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.android.launcher3.LauncherAppWidgetProviderInfo;
 import com.android.launcher3.config.FeatureFlags;

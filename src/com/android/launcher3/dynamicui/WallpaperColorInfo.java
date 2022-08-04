@@ -2,7 +2,7 @@ package com.android.launcher3.dynamicui;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.v4.graphics.ColorUtils;
+import androidx.core.graphics.ColorUtils;
 import android.util.Pair;
 
 import com.android.launcher3.compat.WallpaperColorsCompat;

@@ -38,7 +38,7 @@ import android.os.Handler;
 import android.os.Process;
 import android.os.SystemClock;
 import android.os.UserHandle;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
 import com.android.launcher3.compat.LauncherAppsCompat;

@@ -17,9 +17,8 @@
 package com.android.launcher3.widget;
 
 import android.content.Context;
-import android.content.pm.LauncherApps;
 import android.graphics.Point;
-import android.support.v7.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;

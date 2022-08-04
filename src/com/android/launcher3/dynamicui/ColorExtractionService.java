@@ -30,7 +30,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.ParcelFileDescriptor;
-import android.support.v7.graphics.Palette;
+import androidx.palette.graphics.Palette;
 import android.util.Log;
 
 import com.android.launcher3.LauncherProvider;

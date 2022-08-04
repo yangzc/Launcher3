@@ -9,8 +9,8 @@ import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.os.Process;
 import android.os.UserHandle;
-import android.support.annotation.NonNull;
-import android.support.test.InstrumentationRegistry;
+import androidx.annotation.NonNull;
+import androidx.test.platform.app.InstrumentationRegistry;
 import android.test.ProviderTestCase2;
 
 import com.android.launcher3.AllAppsList;

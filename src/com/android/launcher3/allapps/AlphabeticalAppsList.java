@@ -17,8 +17,8 @@ package com.android.launcher3.allapps;
 
 import android.content.Context;
 import android.os.Process;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
 import com.android.launcher3.AppInfo;

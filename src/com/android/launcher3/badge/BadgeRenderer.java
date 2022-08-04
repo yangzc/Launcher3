@@ -25,7 +25,7 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.Shader;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.SparseArray;
 
 import com.android.launcher3.R;
@@ -111,7 +111,7 @@ public class BadgeRenderer {
                     .setupBlurForSize(mSize).createPill(width, mSize);
             mBackgroundsWithShadow.put(numChars, backgroundWithShadow);
         }
-        canvas.save(Canvas.MATRIX_SAVE_FLAG);
+        canvas.save();
         // We draw the badge relative to its center.
         int badgeCenterX = iconBounds.right - width / 2;
         int badgeCenterY = iconBounds.top + mSize / 2;

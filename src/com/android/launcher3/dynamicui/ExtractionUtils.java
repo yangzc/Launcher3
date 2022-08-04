@@ -25,8 +25,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.v4.graphics.ColorUtils;
-import android.support.v7.graphics.Palette;
+import androidx.core.graphics.ColorUtils;
+import androidx.palette.graphics.Palette;
 
 import com.android.launcher3.Utilities;
 import com.android.launcher3.config.FeatureFlags;

@@ -15,10 +15,10 @@
  */
 package com.android.launcher3.anim;
 
-import android.support.animation.FloatPropertyCompat;
-import android.support.animation.SpringAnimation;
-import android.support.animation.SpringForce;
-import android.support.annotation.IntDef;
+import androidx.dynamicanimation.animation.FloatPropertyCompat;
+import androidx.dynamicanimation.animation.SpringAnimation;
+import androidx.dynamicanimation.animation.SpringForce;
+import androidx.annotation.IntDef;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
